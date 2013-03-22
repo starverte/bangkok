@@ -536,9 +536,9 @@ function details_meta() {
 	$spicy = get_post_meta( $post->ID, 'spicy', true );
 ?>
     <p><label>Price</label> 
-	<input type="number" step="0.01" size="25" name="price" value="<?php echo $price; ?>" /></p>
+	<input type="text" size="25" name="price" value="<?php echo $price; ?>" /></p>
     <p><label>Menu Code</label> 
-	<input type="text" size="25" name="menucode" value="<?php echo $menucode; ?>" /></p>
+	<input type="text" size="5" name="menucode" value="<?php echo $menucode; ?>" /></p>
     <p><label for="spicy">
 			<input type="checkbox" name="spicy" id=spicy" <?php if( $spicy == true ) { ?>checked="checked"<?php } ?> />
 			Spicy
