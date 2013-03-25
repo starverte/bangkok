@@ -33,8 +33,8 @@ get_header(); ?>
 					<h4>Hours</h4>
 					Tue - Thu:	11a - 2.30p, 4.30p - 9p<br>
 					Fri - Sun:	11a - 9p<br>
-					Delivery: 11a - 2p &amp; 5p - 8p<br>
 					Closed on Monday<br>
+					Delivery: 5p - 8.30p<br>
 
 					<h4>Takeout and Delivery</h4>
 					970.672.8127<br>
