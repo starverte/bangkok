@@ -2,8 +2,7 @@
 /**
  * The template for displaying image attachments.
  *
- * @package WordPress
- * @subpackage Bangkok
+ * @package Bangkok
  */
 
 get_header(); ?>

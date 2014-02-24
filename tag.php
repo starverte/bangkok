@@ -2,8 +2,7 @@
 /**
  * The template used to display Tag Archive pages
  *
- * @package WordPress
- * @subpackage Bangkok
+ * @package Bangkok
  */
 
 get_header(); ?>

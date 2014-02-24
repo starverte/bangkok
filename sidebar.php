@@ -2,8 +2,7 @@
 /**
  * The Sidebar containing the main widget areas.
  *
- * @package WordPress
- * @subpackage Bangkok
+ * @package Bangkok
  */
 ?>
 		<div id="secondary" class="widget-area" role="complementary">
