@@ -3,8 +3,7 @@
  * Template Name: About
  * Description: The about page
  *
- * @package WordPress
- * @subpackage Bangkok
+ * @package Bangkok
  */
 
 get_header(); ?>

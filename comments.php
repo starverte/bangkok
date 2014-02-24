@@ -7,8 +7,7 @@
  * handled by a callback to bangkok_comment() which is
  * located in the functions.php file.
  *
- * @package WordPress
- * @subpackage Bangkok
+ * @package Bangkok
  */
 ?>
 	<div id="comments">

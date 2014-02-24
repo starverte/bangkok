@@ -2,9 +2,8 @@
 /**
  * The template for displaying 404 pages (Not Found).
  *
- * @package WordPress
- * @subpackage Bangkok
- * @since Bangkok 0.1
+ * @package Bangkok
+ * @since 0.1
  */
 
 get_header(); ?>

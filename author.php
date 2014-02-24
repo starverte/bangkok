@@ -2,8 +2,7 @@
 /**
  * The template for displaying Author Archive pages.
  *
- * @package WordPress
- * @subpackage Bangkok
+ * @package Bangkok
  */
 
 get_header(); ?>

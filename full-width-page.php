@@ -3,8 +3,7 @@
  * Template Name: Full-width, no sidebar
  * Description: A full-width template with no sidebar
  *
- * @package WordPress
- * @subpackage Bangkok
+ * @package Bangkok
  */
 
 get_header(); ?>
