@@ -1,5 +1,5 @@
 <?php
-	$options = get_option('bangkok_theme_options');
+  $options = get_option('bangkok_theme_options');
 ?>
 
 <form role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
