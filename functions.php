@@ -75,7 +75,7 @@ function bangkok_setup() {
 
 endif; // bangkok_setup
 
-if ( function_exists( 'add_theme_support' ) ) { 
+if ( function_exists( 'add_theme_support' ) ) {
 add_theme_support( 'post-thumbnails' );
 }
 
@@ -416,7 +416,7 @@ function bangkok_save_data($post_id) {
 
 // BEGIN - Custom Post Type
 add_action('init', 'create_menu_types');
-function create_menu_types() 
+function create_menu_types()
 {
   $directory = get_stylesheet_directory_uri();
   $labels = array(
@@ -429,7 +429,7 @@ function create_menu_types()
     'view_item' => __('View Menu'),
     'search_items' => __('Search Menus'),
     'not_found' =>  __('No menus found matching that criteria'),
-    'not_found_in_trash' => __('No menus found in Trash. Did you check recycling?'), 
+    'not_found_in_trash' => __('No menus found in Trash. Did you check recycling?'),
     'parent_item_colon' => '',
     'menu_name' => 'Café Menu',
   );
@@ -437,17 +437,17 @@ function create_menu_types()
     'labels' => $labels,
     'public' => true,
     'publicly_queryable' => true,
-    'show_ui' => true, 
-    'show_in_menu' => true, 
+    'show_ui' => true,
+    'show_in_menu' => true,
     'query_var' => true,
     'menu_icon' => $directory . '/images/music.png',
     'capability_type' => 'post',
-    'has_archive' => true, 
+    'has_archive' => true,
     'rewrite' => array('slug' => 'menu'),
     'hierarchical' => false,
     'menu_position' => 5,
     'supports' => array('title', 'editor', 'thumbnail')
-  ); 
+  );
   register_post_type('menu',$args);
 }
 // END - Custom Post Type
@@ -457,17 +457,17 @@ add_action( 'init', 'create_menu_taxonomy', 0 );
 function create_menu_taxonomy()
 {
 /* Menu Groups */
-$labels = array(  
+$labels = array(
   'name' => _x( 'Menu Group', 'custom taxonomy general name'),
   'singular_name' => _x( 'Menu Group', 'custom taxonomy singular name' ),
   'menu_name' => __( 'Menu Groups'),
-  'search_items' => __( 'Search menu groups' ), 
-  'popular_items' => __( 'Most popular menu groups' ), 
+  'search_items' => __( 'Search menu groups' ),
+  'popular_items' => __( 'Most popular menu groups' ),
   'all_items' => __( 'All menu groups' ),
   'edit_item' => __( 'Edit menu group' ),
-  'update_item' => __( 'Update menu group' ), 
+  'update_item' => __( 'Update menu group' ),
   'add_new_item' => __( 'Add new menu group' ),
-  'new_item_name' => __( 'New menu group' ), 
+  'new_item_name' => __( 'New menu group' ),
   'separate_items_with_commas' => __( 'Separate menu groups with commas' ),
   'add_or_remove_items' => __( 'Add or remove menu groups' ),
   'choose_from_most_used' => __( 'Choose from most used menu groups' ),
@@ -476,8 +476,8 @@ $labels = array(
 );
 
 register_taxonomy('menu_group','menu', array(
-  'hierarchical' => true, 
-  'labels' => $labels, 
+  'hierarchical' => true,
+  'labels' => $labels,
   'show_ui' => true,
   'query_var' => true,
     'rewrite' => true,
@@ -487,17 +487,17 @@ add_action( 'init', 'create_options_taxonomy', 0 );
 function create_options_taxonomy()
 {
 /* Options */
-$labels = array(  
+$labels = array(
   'name' => _x( 'Options', 'custom taxonomy general name'),
   'singular_name' => _x( 'Option', 'custom taxonomy singular name' ),
   'menu_name' => __( 'Options'),
-  'search_items' => __( 'Search menu options' ), 
-  'popular_items' => __( 'Most popular options' ), 
+  'search_items' => __( 'Search menu options' ),
+  'popular_items' => __( 'Most popular options' ),
   'all_items' => __( 'All menu options' ),
   'edit_item' => __( 'Edit menu option' ),
-  'update_item' => __( 'Update menu option' ), 
+  'update_item' => __( 'Update menu option' ),
   'add_new_item' => __( 'Add new menu option' ),
-  'new_item_name' => __( 'New menu option' ), 
+  'new_item_name' => __( 'New menu option' ),
   'separate_items_with_commas' => __( 'Separate options with commas' ),
   'add_or_remove_items' => __( 'Add or remove menu options' ),
   'choose_from_most_used' => __( 'Choose from most used options' ),
@@ -506,8 +506,8 @@ $labels = array(
 );
 
 register_taxonomy('option','menu', array(
-  'hierarchical' => false, 
-  'labels' => $labels, 
+  'hierarchical' => false,
+  'labels' => $labels,
   'show_ui' => true,
   'query_var' => true,
     'rewrite' => true,
@@ -522,7 +522,7 @@ function my_meta_boxes() {
 }
 function hide_meta_boxes() {
   remove_meta_box( 'postcustom' , 'post' , 'normal' );
-  remove_meta_box( 'postcustom' , 'page' , 'normal' ); 
+  remove_meta_box( 'postcustom' , 'page' , 'normal' );
 }
 add_action( 'admin_menu' , 'hide_meta_boxes' );
 
@@ -534,9 +534,9 @@ function details_meta() {
   $menucode = $custom["menucode"] [0];
   $spicy = get_post_meta( $post->ID, 'spicy', true );
 ?>
-    <p><label>Price</label> 
+    <p><label>Price</label>
   <input type="text" size="25" name="price" value="<?php echo $price; ?>" /></p>
-    <p><label>Menu Code</label> 
+    <p><label>Menu Code</label>
   <input type="text" size="5" name="menucode" value="<?php echo $menucode; ?>" /></p>
     <p><label for="spicy">
       <input type="checkbox" name="spicy" id=spicy" <?php if( $spicy == true ) { ?>checked="checked"<?php } ?> />
@@ -561,7 +561,7 @@ function save_details(){
   if( ereg('/\edit\.php', $_SERVER['REQUEST_URI']) ) { //Detects if the save action is coming from a quick edit/batch edit.
   return $post_id;
   }
-  
+
   // save all meta data
   update_post_meta($post->ID, 'spicy', $_POST["spicy"] );
   update_post_meta($post->ID, "price", $_POST["price"]);

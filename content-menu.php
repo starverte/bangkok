@@ -32,17 +32,17 @@
   <footer class="entry-meta">
      <?php
     $terms = get_the_terms( $post->ID, 'option' );
-            
-    if ( $terms && ! is_wp_error( $terms ) ) : 
+
+    if ( $terms && ! is_wp_error( $terms ) ) :
 
       $option_links = array();
 
       foreach ( $terms as $term ) {
         $option_links[] = $term->name;
       }
-      
+
       $choice_of = join( ", ", $option_links );
-            
+
     ?>
 
     <p class="choices">

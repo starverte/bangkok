@@ -58,7 +58,7 @@
 <body <?php body_class(); ?>>
   <?php
     $options = get_option('bangkok_theme_options');
-  ?>  
+  ?>
 
 <div id="page" class="hfeed">
 
@@ -87,7 +87,7 @@
 
       <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
     </nav><!-- #access -->
-  
+
 
   </header><!-- #branding -->
 
