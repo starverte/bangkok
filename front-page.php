@@ -11,7 +11,7 @@ get_header(); ?>
     <div id="primary" class="full-width">
       <div id="content" role="main">
 
-        <?php echo do_shortcode('[nivoslider slug="splash"]'); ?>
+        <?php echo do_shortcode('[steel_slideshow name="splash"]'); ?>
 
       </div><!-- #content -->
     </div><!-- #primary -->
